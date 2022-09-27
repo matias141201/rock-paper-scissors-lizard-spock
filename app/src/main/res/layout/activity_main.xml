@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/clView">
+
+        <TextView
+            android:id="@+id/tvText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="elige uno"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/ivSpock"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.275" />
+
+
+        <ImageButton
+            android:id="@+id/ivSpock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/ivPaper"
+            app:layout_constraintEnd_toStartOf="@+id/ivRock"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvText"
+            app:layout_constraintVertical_bias="0.266"
+            app:srcCompat="@drawable/spock" />
+
+
+        <ImageButton
+            android:id="@+id/ivRock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/ivScissors"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivSpock"
+            app:layout_constraintTop_toTopOf="@+id/tvText"
+            app:layout_constraintVertical_bias="0.266"
+            app:srcCompat="@drawable/rock" />
+
+        <ImageButton
+            android:id="@+id/ivPaper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/ivLizard"
+            app:layout_constraintEnd_toStartOf="@+id/ivScissors"
+            app:layout_constraintHorizontal_bias="0.214"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ivSpock"
+            app:layout_constraintVertical_bias="0.999"
+            app:srcCompat="@drawable/paper" />
+
+        <ImageButton
+            android:id="@+id/ivScissors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/ivLizard"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivPaper"
+            app:layout_constraintTop_toTopOf="@+id/ivRock"
+            app:layout_constraintVertical_bias="0.999"
+            app:srcCompat="@drawable/scissors" />
+
+        <ImageButton
+            android:id="@+id/ivLizard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/ivScissors"
+            app:layout_constraintStart_toStartOf="@+id/ivPaper"
+            app:layout_constraintTop_toTopOf="@+id/tvText"
+            app:layout_constraintVertical_bias="0.601"
+            app:srcCompat="@drawable/lizard" />
+
+        <Button
+            android:id="@+id/btNext"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:backgroundTint="@color/gray"
+            android:text="piedra, papel, tijeras, lagarto, spock!"
+            app:cornerRadius="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivLizard"
+            app:layout_constraintVertical_bias="0.916" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
